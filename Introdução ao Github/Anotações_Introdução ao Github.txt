@@ -1,0 +1,7 @@
+//--- Passo a passo para subir projeto para o GitHub:
+- Criar um repositório no Github
+- git init 
+- git add .
+- git commit -m "Primeiro commit"  
+- git remote add origin URL 
+- git push -u origin master 
