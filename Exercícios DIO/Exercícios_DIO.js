@@ -27,18 +27,46 @@ você terá 5 variáveis:
 2 - gasto médio de combustível do carro por KM;
 3 - distância em KM 
 */
- const precoDaGasolina = 6.66;
- const precoDoEtanol = 5.79;
- const KmPorLitro = 10;
- const distancia = 100; 
- const tipoCombustivel = 'Gasolina'
+//  const precoDaGasolina = 6.66;
+//  const precoDoEtanol = 5.79;
+//  const KmPorLitro = 10;
+//  const distancia = 100; 
+//  const tipoCombustivel = 'Gasolina'
 
- const litrosConsumidos = distancia / KmPorLitro;
+//  const litrosConsumidos = distancia / KmPorLitro;
 
- if(tipoCombustivel === 'Etanol'){
-     const valorGasto1 = litrosConsumidos * precoDoEtanol; 
-     console.log(valorGasto1);
- } else {
-     const valorGasto2 = litrosConsumidos * precoDaGasolina;
-     console.log(valorGasto2);
- }
+//  if(tipoCombustivel === 'Etanol'){
+//      const valorGasto1 = litrosConsumidos * precoDoEtanol; 
+//      console.log(valorGasto1);
+//  } else {
+//      const valorGasto2 = litrosConsumidos * precoDaGasolina;
+//      console.log(valorGasto2);
+//  }
+
+//-------------------------------------------------------------------------------------------------------------------
+/* 
+//---Desafio 3
+Faça um algoritmo que dado as 3 notas tiradas por um aluno em um semestre da faculdade calcule e imprima a
+sua média e a sua classificação conforme a tabela abaixo:
+
+Média = (nota 1 + nota 2 + nota 3) / 3;
+
+classificação:
+- Média menor que 5, reprovado;
+- Média entre 5 e 7, recuperação;
+- Média acima de 7, passou
+*/
+
+const nota1 = 3.5;
+const nota2 = 4.5;
+const nota3 = 5.0;
+
+const mediaAluno = (nota1 + nota2 + nota3) / 3;
+
+if (mediaAluno >= 7) {
+    console.log(`Média: ${mediaAluno.toFixed(2)}. Aprovado!`);
+} else if (mediaAluno >= 5 && mediaAluno < 7) {
+    console.log(`Média: ${mediaAluno.toFixed(2)}. Recuperação!`);
+} else if (mediaAluno < 5) {
+    console.log(`Média: ${mediaAluno.toFixed(2)}. Recuperação!`);
+}
