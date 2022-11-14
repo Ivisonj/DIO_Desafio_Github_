@@ -57,16 +57,53 @@ classificação:
 - Média acima de 7, passou
 */
 
-const nota1 = 3.5;
-const nota2 = 4.5;
-const nota3 = 5.0;
+// const nota1 = 3.5;
+// const nota2 = 4.5;
+// const nota3 = 5.0;
 
-const mediaAluno = (nota1 + nota2 + nota3) / 3;
+// const mediaAluno = (nota1 + nota2 + nota3) / 3;
 
-if (mediaAluno >= 7) {
-    console.log(`Média: ${mediaAluno.toFixed(2)}. Aprovado!`);
-} else if (mediaAluno >= 5 && mediaAluno < 7) {
-    console.log(`Média: ${mediaAluno.toFixed(2)}. Recuperação!`);
-} else if (mediaAluno < 5) {
-    console.log(`Média: ${mediaAluno.toFixed(2)}. Recuperação!`);
+// if (mediaAluno >= 7) {
+//     console.log(`Média: ${mediaAluno.toFixed(2)}. Aprovado!`);
+// } else if (mediaAluno >= 5 && mediaAluno < 7) {
+//     console.log(`Média: ${mediaAluno.toFixed(2)}. Recuperação!`);
+// } else if (mediaAluno < 5) {
+//     console.log(`Média: ${mediaAluno.toFixed(2)}. Recuperação!`);
+// }
+
+//---------------------------------------------------------------------------------------------------------------------
+/* 
+//---Desafio 4 
+O IMC (Indice de Massa Corporal) é um critério da Oganização Mundial da Saúde para dar uma indicação sobre a 
+condição de peso de uma pessoa adulta.
+
+Formula do IMC:
+IMC = peso / (altura * altura)
+
+Elabore um algoritmo que dado o peso e a altura de um adulto mostre sua condição de acordo com a tabela abaixo.
+
+IMC em adultos condição:
+- Abaixo de 18.5, Abaixo do peso;
+- Entre 18.5 e 25, Peso normal;
+- Entre 25 e 30, Acima do peso;
+- Entre 30 e 40, Obeso;
+- Acima de 40, Obesidade Grave;
+*/
+
+const peso = 71;
+const altura = 1.75;
+
+const IMC = peso / Math.pow(altura,2);
+//(altura * altura) = Math.pow(altura,2)
+
+if (IMC < 18.5) {
+    console.log(`IMC: ${IMC.toFixed(2)}. Abaixo do Peso!`);
+} else if (IMC >= 18.5 && IMC < 25) {
+    console.log(`IMC: ${IMC.toFixed(2)}. Peso Normal!`);
+} else if (IMC >= 25 && IMC < 30) {
+    console.log(`IMC: ${IMC.toFixed(2)}. Acima do Peso!`);
+} else if (IMC >= 30 && IMC < 40) {
+    console.log(`IMC: ${IMC.toFixed(2)}. Obeso!`);
+} else if (IMC >= 40) {
+    console.log(`IMC: ${IMC.toFixed(2)}. Obesidade Grave!`);
 }
