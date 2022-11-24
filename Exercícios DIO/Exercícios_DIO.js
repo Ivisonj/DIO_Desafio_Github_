@@ -121,15 +121,27 @@ Código Condição de pagamento:
 4 - Em duas vezes, preço normal de etiqueta sem juros;
 5 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%
 */
-const precoEtiqueta = 100;
-const formaDePagamento = 4;
+// const precoEtiqueta = 100;
+// const formaDePagamento = 4;
 
-if (formaDePagamento === 1) {
-    console.log(precoEtiqueta - (precoEtiqueta * 0.1));
-} else if (formaDePagamento === 2) {
-    console.log(precoEtiqueta - (precoEtiqueta * 0.15));
-} else if (formaDePagamento === 3) {
-    console.log(precoEtiqueta);
-} else if (formaDePagamento === 4) {
-    console.log(precoEtiqueta + (precoEtiqueta * 0.1));
-}
+// if (formaDePagamento === 1) {
+//     console.log(precoEtiqueta - (precoEtiqueta * 0.1));
+// } else if (formaDePagamento === 2) {
+//     console.log(precoEtiqueta - (precoEtiqueta * 0.15));
+// } else if (formaDePagamento === 3) {
+//     console.log(precoEtiqueta);
+// } else if (formaDePagamento === 4) {
+//     console.log(precoEtiqueta + (precoEtiqueta * 0.1));
+// }
+
+//------------------------------------------------------------------------------------------------------------------------------
+//---Desafio 6
+//Utilizando funções
+function incrementarJuros(valor, percentualJuros) {
+     const valorAcrescimo = (percentualJuros / 100) * valor;
+     return valor + valorAcrescimo;
+ }
+ console.log(incrementarJuros(100, 10));
+
+ //------------------------------------------------------------------------------------------------------------------------------
+ 
