@@ -162,27 +162,42 @@ IMC em adultos condição:
 - Entre 30 e 40, Obeso;
 - Acima de 40, Obesidade Grave;
 */
-function calcularImc(peso, altura) {
-    return peso / Math.pow(altura, 2);
+// function calcularImc(peso, altura) {
+//     return peso / Math.pow(altura, 2);
+// }
+
+// function classificarImc(imc) {
+//     if (IMC < 18.5) {
+//         return `IMC: ${IMC.toFixed(2)}. Abaixo do Peso!`;
+//     } else if (IMC >= 18.5 && IMC < 25) {
+//         return `IMC: ${IMC.toFixed(2)}. Peso Normal!`;
+//     } else if (IMC >= 25 && IMC < 30) {
+//         return `IMC: ${IMC.toFixed(2)}. Acima do Peso!`;
+//     } else if (IMC >= 30 && IMC < 40) {
+//         return `IMC: ${IMC.toFixed(2)}. Obeso!`;
+//     } else if (IMC >= 40) {
+//         return `IMC: ${IMC.toFixed(2)}. Obesidade Grave!`;
+//     }
+
+// }
+
+// const peso = 71;
+// const altura = 1.75;
+
+// const IMC = calcularImc(peso, altura);
+// console.log(classificarImc(IMC))
+
+//-------------------------------------------------------------------------------------------------------------------
+//---Desafio 8
+function escreverMeuNome(nome) {
+    return 'Meu nome é:' + nome;
 }
 
-function classificarImc(imc) {
-    if (IMC < 18.5) {
-        return `IMC: ${IMC.toFixed(2)}. Abaixo do Peso!`;
-    } else if (IMC >= 18.5 && IMC < 25) {
-        return `IMC: ${IMC.toFixed(2)}. Peso Normal!`;
-    } else if (IMC >= 25 && IMC < 30) {
-        return `IMC: ${IMC.toFixed(2)}. Acima do Peso!`;
-    } else if (IMC >= 30 && IMC < 40) {
-        return `IMC: ${IMC.toFixed(2)}. Obeso!`;
-    } else if (IMC >= 40) {
-        return `IMC: ${IMC.toFixed(2)}. Obesidade Grave!`;
+function verificarIdade(idade) {
+    if(idade > 18){
+        console.log(escreverMeuNome('Ivison') + ', Maior!')
+    } else {
+        console.log(escreverMeuNome('Ivison') +  ', Menor!')
     }
-
 }
-
-const peso = 71;
-const altura = 1.75;
-
-const IMC = calcularImc(peso, altura);
-console.log(classificarImc(IMC))
+verificarIdade(25)
