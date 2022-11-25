@@ -137,11 +137,52 @@ Código Condição de pagamento:
 //------------------------------------------------------------------------------------------------------------------------------
 //---Desafio 6
 //Utilizando funções
-function incrementarJuros(valor, percentualJuros) {
-     const valorAcrescimo = (percentualJuros / 100) * valor;
-     return valor + valorAcrescimo;
- }
- console.log(incrementarJuros(100, 10));
+// function incrementarJuros(valor, percentualJuros) {
+//      const valorAcrescimo = (percentualJuros / 100) * valor;
+//      return valor + valorAcrescimo;
+//  }
+//  console.log(incrementarJuros(100, 10));
 
  //------------------------------------------------------------------------------------------------------------------------------
+ //---Desafio 7
  
+//---Exemplo do IMC 
+/* O IMC (Indice de Massa Corporal) é um critério da Oganização Mundial da Saúde para dar uma indicação sobre a 
+condição de peso de uma pessoa adulta.
+
+Formula do IMC:
+IMC = peso / (altura * altura)
+
+Elaore um algoritmo que dado o peso e a altura de um adulto mostre sua condição de acordo com a tabela abaixo.
+
+IMC em adultos condição:
+- Abaixo de 18.5, Abaixo do peso;
+- Entre 18.5 e 25, Peso normal;
+- Entre 25 e 30, Acima do peso;
+- Entre 30 e 40, Obeso;
+- Acima de 40, Obesidade Grave;
+*/
+function calcularImc(peso, altura) {
+    return peso / Math.pow(altura, 2);
+}
+
+function classificarImc(imc) {
+    if (IMC < 18.5) {
+        return `IMC: ${IMC.toFixed(2)}. Abaixo do Peso!`;
+    } else if (IMC >= 18.5 && IMC < 25) {
+        return `IMC: ${IMC.toFixed(2)}. Peso Normal!`;
+    } else if (IMC >= 25 && IMC < 30) {
+        return `IMC: ${IMC.toFixed(2)}. Acima do Peso!`;
+    } else if (IMC >= 30 && IMC < 40) {
+        return `IMC: ${IMC.toFixed(2)}. Obeso!`;
+    } else if (IMC >= 40) {
+        return `IMC: ${IMC.toFixed(2)}. Obesidade Grave!`;
+    }
+
+}
+
+const peso = 71;
+const altura = 1.75;
+
+const IMC = calcularImc(peso, altura);
+console.log(classificarImc(IMC))
