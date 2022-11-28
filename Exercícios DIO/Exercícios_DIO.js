@@ -189,15 +189,54 @@ IMC em adultos condição:
 
 //-------------------------------------------------------------------------------------------------------------------
 //---Desafio 8
-function escreverMeuNome(nome) {
-    return 'Meu nome é:' + nome;
+// function escreverMeuNome(nome) {
+//     return 'Meu nome é:' + nome;
+// }
+
+// function verificarIdade(idade) {
+//     if(idade > 18){
+//         console.log(escreverMeuNome('Ivison') + ', Maior!')
+//     } else {
+//         console.log(escreverMeuNome('Ivison') +  ', Menor!')
+//     }
+// }
+// verificarIdade(25)
+
+//------------------------------------------------------------------------------------------------------------------
+//Desafio 9
+//--- Refazendo o Desafio 5:
+/*
+Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta
+e a escolha da condição de pagamento.
+Utilize os códigos da tabela a seguir para ler qual a condição de pagamento escolhida e efetuar o cálculo adequado
+
+Código Condição de pagamento:
+1 - À vista Débito, recebe 10% de desconto;
+2 - À vista no dinheiro ou PIX, recebe 15% de desconto;
+4 - Em duas vezes, preço normal de etiqueta sem juros;
+5 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%
+*/
+function aplicarDesconto(valor, desconto) {
+    return valor - (valor * (desconto / 100))
 }
 
-function verificarIdade(idade) {
-    if(idade > 18){
-        console.log(escreverMeuNome('Ivison') + ', Maior!')
-    } else {
-        console.log(escreverMeuNome('Ivison') +  ', Menor!')
-    }
+function aplicarjuros(valor, juros) {
+    return valor + (valor * (juros / 100))
 }
-verificarIdade(25)
+
+
+function compras(formaDePagamento){
+    const precoEtiqueta = 100;
+
+    if (formaDePagamento === 1) {
+        console.log(aplicarDesconto(precoEtiqueta, 10));
+    } else if (formaDePagamento === 2) {
+        console.log(aplicarDesconto(precoEtiqueta, 15));
+    } else if (formaDePagamento === 3) {
+        console.log(precoEtiqueta);
+    } else if (formaDePagamento === 4) {
+        console.log(aplicarjuros(precoEtiqueta, 10));
+    }
+
+}
+compras(1)
