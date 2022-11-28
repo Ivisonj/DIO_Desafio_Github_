@@ -216,27 +216,43 @@ Código Condição de pagamento:
 4 - Em duas vezes, preço normal de etiqueta sem juros;
 5 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%
 */
-function aplicarDesconto(valor, desconto) {
-    return valor - (valor * (desconto / 100))
-}
+// function aplicarDesconto(valor, desconto) {
+//     return valor - (valor * (desconto / 100))
+// }
 
-function aplicarjuros(valor, juros) {
-    return valor + (valor * (juros / 100))
-}
+// function aplicarjuros(valor, juros) {
+//     return valor + (valor * (juros / 100))
+// }
 
 
-function compras(formaDePagamento){
-    const precoEtiqueta = 100;
+// function compras(formaDePagamento){
+//     const precoEtiqueta = 100;
 
-    if (formaDePagamento === 1) {
-        console.log(aplicarDesconto(precoEtiqueta, 10));
-    } else if (formaDePagamento === 2) {
-        console.log(aplicarDesconto(precoEtiqueta, 15));
-    } else if (formaDePagamento === 3) {
-        console.log(precoEtiqueta);
-    } else if (formaDePagamento === 4) {
-        console.log(aplicarjuros(precoEtiqueta, 10));
+//     if (formaDePagamento === 1) {
+//         console.log(aplicarDesconto(precoEtiqueta, 10));
+//     } else if (formaDePagamento === 2) {
+//         console.log(aplicarDesconto(precoEtiqueta, 15));
+//     } else if (formaDePagamento === 3) {
+//         console.log(precoEtiqueta);
+//     } else if (formaDePagamento === 4) {
+//         console.log(aplicarjuros(precoEtiqueta, 10));
+//     }
+
+// }
+// compras(1)
+
+//-----------------------------------------------------------------------------------------------------------------------
+// ---Objeto
+const pessoa = {
+    nome: 'Ivison Joel ',
+    idade: 26,
+
+    descrever: function() {
+        console.log(`Meu nome é: ${this.nome} e  minha idade é ${this.idade}`);
     }
+};
+pessoa.nome = 'Sirlane'; //subscrever o nome e a idade 
+pessoa.idade = 19
 
-}
-compras(1)
+pessoa.descrever();
+
