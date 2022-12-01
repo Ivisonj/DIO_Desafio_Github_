@@ -243,16 +243,35 @@ Código Condição de pagamento:
 
 //-----------------------------------------------------------------------------------------------------------------------
 // ---Objeto
-const pessoa = {
-    nome: 'Ivison Joel ',
-    idade: 26,
+// const pessoa = {
+//     nome: 'Ivison Joel ',
+//     idade: 26,
 
-    descrever: function() {
+//     descrever: function() {
+//         console.log(`Meu nome é: ${this.nome} e  minha idade é ${this.idade}`);
+//     }
+// };
+// pessoa.nome = 'Sirlane'; //subscrever o nome e a idade 
+// pessoa.idade = 19
+
+// pessoa.descrever();
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//---classe
+//Classe é a definição e instância é a ocorrencia 
+class Pessoa {
+    nome;
+    idade;
+
+    descrever () {    //dentro de uma classe não precisa colocar a palavra 'function'
         console.log(`Meu nome é: ${this.nome} e  minha idade é ${this.idade}`);
     }
-};
-pessoa.nome = 'Sirlane'; //subscrever o nome e a idade 
-pessoa.idade = 19
+}
 
-pessoa.descrever();
+//a classe 'Pessoa' foi criada, agora vamos instanciar 
+const ivison = new Pessoa();
+ivison.nome = 'Ivison Joel';
+ivison.idade = 25;
 
+console.log(ivison);
