@@ -277,16 +277,48 @@ Código Condição de pagamento:
 // console.log(ivison);
 
 //---Exemplo 2
-class Pessoa2 {
-    nome;
-    idade;
-    anoDeNascimento;
+// class Pessoa2 {
+//     nome;
+//     idade;
+//     anoDeNascimento;
 
-    constructor(nome,idade) {
-        this.nome = nome;
-        this.idade = idade;
-        this.anoDeNascimento = 2022 - idade;
+//     constructor(nome,idade) {
+//         this.nome = nome;
+//         this.idade = idade;
+//         this.anoDeNascimento = 2022 - idade;
+//     }
+// }
+// const Sirlane = new Pessoa2('Sirlane', 19);
+// console.log(Sirlane);
+
+//-------------------------------------------------------------------------------------------------------------------
+/*
+//---Desafio: classes
+1 - Crie uma classe para representar carros.
+2 - Os carros possuem uma marca, uma cor e um gasto médio de combustível por KM rodado.
+3 - Crie um método que dado a quantidade de quilômetros e o preço de combustível nos dê o valor gasto em 
+reais para realizar este percurso.
+*/
+
+class Carro {
+    marca;
+    cor;
+    gastoMedio;
+
+    constructor(marca, cor, gastoMedio) {
+        this.marca = marca
+        this.cor = cor
+        this.gastoMedio = gastoMedio
     }
+
+    calcularValorDaViagem(distancia, precoCombustivel) {
+        const litrosConsumidos = distancia / this.gastoMedio;
+        const valorGasto = litrosConsumidos * precoCombustivel
+
+        return valorGasto.toFixed(2)
+    }
+
 }
-const Sirlane = new Pessoa2('Sirlane', 19);
-console.log(Sirlane);
+const uno = new Carro('Uno', 'Azul', 12);
+console.log(uno.calcularValorDaViagem(70, 5.00));
+
