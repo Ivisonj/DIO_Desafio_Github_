@@ -300,25 +300,73 @@ Código Condição de pagamento:
 reais para realizar este percurso.
 */
 
-class Carro {
-    marca;
-    cor;
-    gastoMedio;
+// class Carro {
+//     marca;
+//     cor;
+//     gastoMedio;
 
-    constructor(marca, cor, gastoMedio) {
-        this.marca = marca
-        this.cor = cor
-        this.gastoMedio = gastoMedio
+//     constructor(marca, cor, gastoMedio) {
+//         this.marca = marca
+//         this.cor = cor
+//         this.gastoMedio = gastoMedio
+//     }
+
+//     calcularValorDaViagem(distancia, precoCombustivel) {
+//         const litrosConsumidos = distancia / this.gastoMedio;
+//         const valorGasto = litrosConsumidos * precoCombustivel
+
+//         return valorGasto.toFixed(2)
+//     }
+
+// }
+// const uno = new Carro('Uno', 'Azul', 12);
+// console.log(uno.calcularValorDaViagem(70, 5.00));
+
+//----------------------------------------------------------------------------------------------------------------------
+//---Desafio 7 
+/*
+Crie uma classe para representar pessoas.
+1 - Para cada pessoa teremos os atributos: nome, peso, altura.
+2 - As pessoas devem ter a capacidade de dizer o valor do seu IMC (IMC = peso / (altura * altura)).
+3 - Instancie uma pessoa chamada José que tenha 70kg de peso, 1,75 de altura e peça ao José para dizer
+o valor do seu IMC;
+*/
+class Pessoa3 {
+    nome;
+    peso;
+    altura;
+
+    constructor(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
     }
 
-    calcularValorDaViagem(distancia, precoCombustivel) {
-        const litrosConsumidos = distancia / this.gastoMedio;
-        const valorGasto = litrosConsumidos * precoCombustivel
-
-        return valorGasto.toFixed(2)
+    calcularImc() {
+        const calculoImc = this.peso / (Math.pow(this.altura, 2));
+        return calculoImc.toFixed(2);
     }
 
+    classificarImc() {
+        const IMC = this.calcularImc()
+
+        if (IMC < 18.5) {
+                    return `IMC: ${IMC}. Abaixo do Peso!`;
+                } else if (IMC >= 18.5 && IMC < 25) {
+                    return `IMC: ${IMC}. Peso Normal!`;
+                } else if (IMC >= 25 && IMC < 30) {
+                    return `IMC: ${IMC}. Acima do Peso!`;
+                } else if (IMC >= 30 && IMC < 40) {
+                    return `IMC: ${IMC}. Obeso!`;
+                } else if (IMC >= 40) {
+                    return `IMC: ${IMC}. Obesidade Grave!`;
+                }
+    }
 }
-const uno = new Carro('Uno', 'Azul', 12);
-console.log(uno.calcularValorDaViagem(70, 5.00));
+
+const jose = new Pessoa3('José', 70, 1.75);
+console.log(jose.classificarImc());
+
+const maria = new Pessoa3('Maria', 100, 1.55);
+console.log(maria.classificarImc())
 
