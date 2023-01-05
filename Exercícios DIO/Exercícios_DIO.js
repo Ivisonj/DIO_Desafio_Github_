@@ -323,7 +323,7 @@ reais para realizar este percurso.
 // console.log(uno.calcularValorDaViagem(70, 5.00));
 
 //----------------------------------------------------------------------------------------------------------------------
-//---Desafio 7 
+//---Desafio 
 /*
 Crie uma classe para representar pessoas.
 1 - Para cada pessoa teremos os atributos: nome, peso, altura.
@@ -331,42 +331,53 @@ Crie uma classe para representar pessoas.
 3 - Instancie uma pessoa chamada José que tenha 70kg de peso, 1,75 de altura e peça ao José para dizer
 o valor do seu IMC;
 */
-class Pessoa3 {
-    nome;
-    peso;
-    altura;
+// class Pessoa3 {
+//     nome;
+//     peso;
+//     altura;
 
-    constructor(nome, peso, altura) {
-        this.nome = nome;
-        this.peso = peso;
-        this.altura = altura;
-    }
+//     constructor(nome, peso, altura) {
+//         this.nome = nome;
+//         this.peso = peso;
+//         this.altura = altura;
+//     }
 
-    calcularImc() {
-        const calculoImc = this.peso / (Math.pow(this.altura, 2));
-        return calculoImc.toFixed(2);
-    }
+//     calcularImc() {
+//         const calculoImc = this.peso / (Math.pow(this.altura, 2));
+//         return calculoImc.toFixed(2);
+//     }
 
-    classificarImc() {
-        const IMC = this.calcularImc()
+//     classificarImc() {
+//         const IMC = this.calcularImc()
 
-        if (IMC < 18.5) {
-                    return `IMC: ${IMC}. Abaixo do Peso!`;
-                } else if (IMC >= 18.5 && IMC < 25) {
-                    return `IMC: ${IMC}. Peso Normal!`;
-                } else if (IMC >= 25 && IMC < 30) {
-                    return `IMC: ${IMC}. Acima do Peso!`;
-                } else if (IMC >= 30 && IMC < 40) {
-                    return `IMC: ${IMC}. Obeso!`;
-                } else if (IMC >= 40) {
-                    return `IMC: ${IMC}. Obesidade Grave!`;
-                }
+//         if (IMC < 18.5) {
+//                     return `IMC: ${IMC}. Abaixo do Peso!`;
+//                 } else if (IMC >= 18.5 && IMC < 25) {
+//                     return `IMC: ${IMC}. Peso Normal!`;
+//                 } else if (IMC >= 25 && IMC < 30) {
+//                     return `IMC: ${IMC}. Acima do Peso!`;
+//                 } else if (IMC >= 30 && IMC < 40) {
+//                     return `IMC: ${IMC}. Obeso!`;
+//                 } else if (IMC >= 40) {
+//                     return `IMC: ${IMC}. Obesidade Grave!`;
+//                 }
+//     }
+// }
+
+// const jose = new Pessoa3('José', 70, 1.75);
+// console.log(jose.classificarImc());
+
+// const maria = new Pessoa3('Maria', 100, 1.55);
+// console.log(maria.classificarImc())
+
+//--------------------------------------------------------------------------------------------------------------------------------
+//---Desafio Array
+/*
+Crie um programa que dado um número imprima a sua tabuada
+*/
+function tabuada(numero){
+    for(let i = 1; i <= 10; i++){
+        console.log(`${numero} + ${i} = ${numero + i}`);
     }
 }
-
-const jose = new Pessoa3('José', 70, 1.75);
-console.log(jose.classificarImc());
-
-const maria = new Pessoa3('Maria', 100, 1.55);
-console.log(maria.classificarImc())
-
+tabuada(5);
