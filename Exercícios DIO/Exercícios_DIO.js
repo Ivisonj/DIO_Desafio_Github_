@@ -375,9 +375,25 @@ o valor do seu IMC;
 /*
 Crie um programa que dado um número imprima a sua tabuada
 */
-function tabuada(numero){
-    for(let i = 1; i <= 10; i++){
-        console.log(`${numero} + ${i} = ${numero + i}`);
+// function tabuada(numero){
+//     for(let i = 1; i <= 10; i++){
+//         console.log(`${numero} + ${i} = ${numero + i}`);
+//     }
+// }
+// tabuada(5);
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+//---Desafio
+/* Crie um programa que seja capaz de percorrer uma lista de números e imprima cada número par encontrado  */
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] % 2 === 0) {
+        console.log(numeros[i])
     }
 }
-tabuada(5);
+
+const numerosPares = numeros.filter(function (elemento) {
+    return elemento % 2 === 0
+})
+console.log(numerosPares)
