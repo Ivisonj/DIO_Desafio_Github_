@@ -1,3 +1,10 @@
+/*Crie uma função que dado dois valores (passados como parâmetros) mostre no console a soma, subtração,
+multiplicação e divisão desses valores*/
+// function calculos(a, b){
+//     console.log(a + b, a - b, a * b, a / b)
+// }
+// calculos(10,5)
+
 //Desafio 1---------------------------------------------------------------------------------------------------------------
 /* 
 Faça um programa para calcular o valor de uma viagem 
